@@ -113,6 +113,8 @@ export async function fetchFilteredInvoices(
   const offset = (currentPage - 1) * ITEMS_PER_PAGE;
 
   try {
+    await new Promise((resolve) => setTimeout(resolve, 600));
+
     const invoices = await sql<InvoicesTable>`
       SELECT
         invoices.id,
@@ -166,6 +168,8 @@ export async function fetchInvoicesPages(query: string) {
 
 export async function fetchInvoiceById(id: string) {
   noStore();
+
+  await new Promise((resolve) => setTimeout(resolve, 3000));
 
   try {
     const data = await sql<InvoiceForm>`

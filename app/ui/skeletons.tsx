@@ -216,3 +216,36 @@ export function InvoicesTableSkeleton() {
     </div>
   );
 }
+
+export function EditInvoiceFormSkeleton() {
+  return (
+    <form className="animate-pulse">
+      <div className="rounded-md bg-gray-50 p-4 md:p-6">
+        <div className="mb-4">
+          <div className="h-4 bg-gray-200 rounded w-24 mb-1"></div>
+          <div className="relative">
+            <div className="peer block w-full rounded-md h-10 bg-gray-200 mt-2"></div>
+          </div>
+        </div>
+
+        <div className="mb-4">
+          <div className="h-4 bg-gray-200 rounded w-24 mb-1"></div>
+          <div className="relative mt-2 rounded-md">
+            <div className="relative">
+              <div className="peer block w-full rounded-md h-10 bg-gray-200 mt-2"></div>
+            </div>
+          </div>
+        </div>
+
+        <fieldset>
+          <div className="h-4 bg-gray-200 rounded w-32 mb-1"></div>
+          <div className="rounded-md bg-gray-200 h-10 px-[14px] py-3"></div>
+        </fieldset>
+      </div>
+      <div className="mt-6 flex justify-end gap-4">
+        <div className="flex h-10 items-center rounded-lg bg-gray-200 px-4 text-sm font-medium w-20"></div>
+        <div className="h-10 bg-gray-200 rounded px-4"></div>
+      </div>
+    </form>
+  )
+}
